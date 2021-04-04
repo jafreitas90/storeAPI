@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using store.Domain.Entities.OrderAggregate;
 
-namespace store.Domain.Contracts.Services
+namespace store.Service.Contracts
 {
     public interface IPackageService
     {

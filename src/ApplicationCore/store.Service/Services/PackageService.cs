@@ -3,8 +3,8 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using store.Domain.Contracts.Repository;
-using store.Domain.Contracts.Services;
 using store.Domain.Entities.OrderAggregate;
+using store.Service.Contracts;
 
 namespace store.Service.Services
 {

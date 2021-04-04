@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Moq;
 using store.Domain.Contracts.Repository;
-using store.Domain.Contracts.Services;
 using store.Domain.Entities;
 using store.Domain.Entities.OrderAggregate;
 using store.Domain.Exceptions;
+using store.Service.Contracts;
 using store.Service.Exceptions;
 using store.Service.Features.Commands.Orders;
 using store.Service.Model.Request.Order;

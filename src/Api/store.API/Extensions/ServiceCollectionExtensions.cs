@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using store.DataAccess;
 using store.DataAccess.Data;
 using store.Domain.Contracts.Repository;
-using store.Domain.Contracts.Services;
+using store.Service.Contracts;
 using store.Service.Services;
 
 namespace store.API.Extensions
