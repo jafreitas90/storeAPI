@@ -28,3 +28,16 @@ payload:
 
 Get
 link: https://localhost:5001/orders/1
+
+
+Ready-to-use products:
+
+| ItemNumber  | ProductType |
+| ------------- | ------------- |
+| 123  | mug  |
+| 124  | mug  |
+| 125  | mug  |
+| 126  | cards  |
+| 127  | canvas  |
+| 128  | calendar  |
+| 129  | photoBook  |
