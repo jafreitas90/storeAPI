@@ -1,4 +1,4 @@
-﻿namespace store.Domain.Contracts
+﻿namespace store.Domain.Contracts.Markers
 {
     // marker interface
     public interface IAggregateRoot

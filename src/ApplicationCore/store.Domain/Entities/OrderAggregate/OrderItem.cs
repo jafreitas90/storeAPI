@@ -4,15 +4,15 @@ namespace store.Domain.Entities.OrderAggregate
 {
     public class OrderItem : BaseEntity
     {
-        public ProductItemOrdered ItemOrdered { get; private set; }
         public int Quantity { get; private set; }
+        public int ProductId { get; private set; }
 
-        public OrderItem(ProductItemOrdered itemOrdered, int quantity)
+        public OrderItem(int productId, int quantity)
         {
             Guard.Against.OutOfRange(quantity, nameof(quantity), 1, int.MaxValue);
-            Guard.Against.Null(itemOrdered, nameof(itemOrdered));
+            Guard.Against.OutOfRange(productId, nameof(productId), 1, int.MaxValue);
 
-            ItemOrdered = itemOrdered;
+            ProductId = productId;
             Quantity = quantity;
         }
     }

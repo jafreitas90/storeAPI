@@ -1,4 +1,5 @@
-﻿using store.Domain.Contracts;
+﻿using Ardalis.GuardClauses;
+using store.Domain.Contracts.Markers;
 
 namespace store.Domain.Entities
 {
@@ -6,14 +7,25 @@ namespace store.Domain.Entities
     {
         public int ProductTypeId { get; private set; }
         public ProductType ProductType { get; private set; }
-        public int BinWidth { get; private set; }
-        public string Name { get; private set; }
+        public int ProductNumber { get; private set; }
 
-        public ProductItem(int productTypeId, int binWidth, string name)
+        public ProductItem(int productTypeId, int productNumber)
         {
+            Guard.Against.OutOfRange(productTypeId, nameof(productTypeId), 1, int.MaxValue);
+            Guard.Against.OutOfRange(productNumber, nameof(productNumber), 1, int.MaxValue);
+
             ProductTypeId = productTypeId;
-            BinWidth = binWidth;
-            Name = name;
+            ProductNumber = productNumber;
+        }
+
+        public ProductItem(ProductType productType, int productNumber)
+        {
+            Guard.Against.Null(productType, nameof(productType));
+            Guard.Against.OutOfRange(productType.Id, nameof(productType.Id), 1, int.MaxValue);
+            Guard.Against.OutOfRange(productNumber, nameof(productNumber), 1, int.MaxValue);
+
+            ProductType = productType;
+            ProductNumber = productNumber;
         }
     }
 }
